@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="full-screen" content="true">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>cloud os</title>
+    <style>
+      body{
+        padding: 20px;
+      }
+      .button{
+        color: #007eff;
+        padding: 10px;
+        font-size: 16px;
+        margin: 0 10px 10px 0;
+        background: #fefefe;
+        border: 1px solid #007eff;
+        border-radius: 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+        outline: 0 none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body style="background:#e6e9e9;margin:0;">
+    <button class="button" type="button" id="openService">openService</button>
+    <button class="button" type="button" id="openDialog">openDialog</button>
+    <button class="button" type="button" id="addBrm">addBrm</button>
+    <button class="button" type="button" id="checkServiceOpen">checkServiceOpen</button>
+    <button class="button" type="button" id="postDataToService">postDataToService</button>
+    <button class="button" type="button" id="getContext">getContext</button>
+  </body>
+  <script src="./jDiwork.js"></script>
+  <script>
+    jDiwork.ready(function() {
+      // openService
+      document.getElementById('openService').addEventListener('click', function() {
+        jDiwork.openService('serviceCode', {
+          key1: 'value1',
+          key2: 'value2',
+        }, function(error) {
+          if (error) {
+            return;
+          }
+          console.log('service is open')
+        });
+      }, false);
+      document.getElementById('openDialog').addEventListener('click', function() {
+        jDiwork.openDialog({
+          title: 'title',
+          content: 'content',
+          onClose: () => {
+            return false;
+          },
+          btns: [
+            {
+              label: '保存',
+              fun: (close) => {
+                // dosomething
+                close();
+              },
+              type: 'brand',
+            },
+            {
+              label: '取消',
+            },
+          ],
+        }, function(error) {
+          if (error) {
+            return;
+          }
+          console.log('dialog is open')
+        });
+      }, false);
+      // addBrm
+      document.getElementById('addBrm').addEventListener('click', function() {
+        jDiwork.addBrm('new brm', function(error) {
+          if (error) {
+            return;
+          }
+          console.log('brm is add')
+        });
+      }, false);
+      // checkServiceOpen
+      document.getElementById('checkServiceOpen').addEventListener('click', function() {
+        jDiwork.checkServiceOpen('serviceCode', function(isOpen) {
+          if (isOpen) {
+            console.log('service is open')
+          }
+        });
+      }, false);
+      // postDataToService
+      document.getElementById('postDataToService').addEventListener('click', function() {
+        jDiwork.postDataToService('serviceCode', {
+          key1: 'value1',
+          key2: 'value2',
+        }, function(error) {
+          if (error) {
+            return;
+          }
+          console.log('data is post');
+        });
+      }, false);
+      // getContext
+      document.getElementById('getContext').addEventListener('click', function() {
+        jDiwork.getContext(function(context) {
+          if (context) {
+            console.log('context: ', context);
+          }
+        });
+      }, false);
+      jDiwork.onData(function(data) {
+        if (data) {
+          console.log('get data: ', data);
+        }
+      });
+    })
+  </script>
+</html>

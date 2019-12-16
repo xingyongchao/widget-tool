@@ -1,0 +1,63 @@
+{
+  "name": "cloud-os-widget-dev-env",
+  "version": "0.1.0",
+  "description": "磁贴的开发模拟环境",
+  "author": "zhengxc",
+  "license": "ISC",
+  "scripts": {
+    "start": "node bin/start.js",
+    "create": "node bin/create.js"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.1.6",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "eventsource-polyfill": "^0.9.6",
+    "express": "^4.16.2",
+    "file-loader": "^1.1.5",
+    "friendly-errors-webpack-plugin": "^1.6.1",
+    "html-webpack-plugin": "^2.30.1",
+    "postcss-flexbugs-fixes": "^3.2.0",
+    "postcss-loader": "^2.0.8",
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "style-loader": "^0.19.0",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-hot-middleware": "^2.20.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "devDependencies": {
+    "echarts": "^3.8.5",
+    "@babel/core": "7.0.0-beta.31",
+    "@babel/helper-module-transforms": "7.0.0-beta.31",
+    "@babel/helper-simple-access": "7.0.0-beta.31",
+    "@babel/template": "7.0.0-beta.31",
+    "@babel/types": "7.0.0-beta.31",
+    "assert": "1.4.1",
+    "commander": "2.11.0",
+    "coordtransform": "2.0.2",
+    "escodegen": "1.8.0",
+    "esprima": "2.7.2",
+    "estraverse": "4.1.1",
+    "fs-extra": "0.26.7",
+    "glob": "7.0.0",
+    "rollup": "0.50.0",
+    "rollup-plugin-node-resolve": "3.0.0",
+    "rollup-plugin-uglify": "2.0.1"
+  }
+}

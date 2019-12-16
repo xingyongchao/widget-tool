@@ -1,0 +1,12 @@
+.wrap {
+	height: 132px;
+	position: relative;
+}
+.icon {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	right: 40px;
+	bottom: 50px;
+	transform: translate(50%,50%);
+}

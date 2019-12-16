@@ -1,0 +1,151 @@
+/* cyan*/
+/* blue*/
+/* $bg_list: #52424A // violet*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.toDoList {
+  position: relative;
+  width: 300px;
+  height: 280px;
+  padding: 10px 40px 100px 40px;
+  margin: auto;
+  margin-top: 0px;
+  color: #fff;
+  background: #fab1fa13;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  -webkit-transform: translate3d(0, -5px, 0);
+  -moz-transform: translate3d(0, -5px, 0);
+  -o-transform: translate3d(0, -5px, 0);
+  -ms-transform: translate3d(0, -5px, 0);
+  transform: translate3d(0, -5px, 0);
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+.toDoList:hover {
+  -webkit-box-shadow: 0 70px 70px -35px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 70px 70px -35px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 70px 70px -35px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+  -webkit-transform: translate3d(0, 5px, 0);
+  -moz-transform: translate3d(0, 5px, 0);
+  -o-transform: translate3d(0, 5px, 0);
+  -ms-transform: translate3d(0, 5px, 0);
+  transform: translate3d(0, 5px, 0);
+}
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #cd45ff;
+}
+
+.make {
+  padding: 5px 8px;
+  outline: none;
+  width: 80%;
+  border: none;
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+  cursor: pointer;
+  width: 15%;
+  padding: 5px 2px;
+  outline: none;
+  text-align: center;
+  background: rgba(255, 255, 255, 0);
+  color: #32343c;
+  border: none;
+  -webkit-box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+.btn:hover {
+  -webkit-box-shadow: 0 70px 70px -35px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 70px 70px -35px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 70px 70px -35px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+.forAddItems {
+  margin-bottom: 15px;
+}
+
+.list {
+  list-style: none;
+  font-weight: 300;
+  letter-spacing: 0.6px;
+  color: #000;
+  height: 160px;
+  overflow: auto;
+}
+.list li {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+.list span {
+  position: relative;
+  display: inline-block;
+  line-height: 1.4;
+}
+
+.innerbtn{
+  cursor: pointer;
+}
+
+.label {
+  position: relative;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.label:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -30px;
+  display: block;
+  height: 15px;
+  width: 15px;
+  border: 1px solid #cccccc;
+  background: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  outline: none;
+}
+
+.todoInput {
+  display: none;
+}
+.todoInput:checked + span {
+  text-decoration: line-through;
+}
+.todoInput:checked + span::before {
+  content: "";
+  position: absolute;
+  left: -32px;
+  width: 15px;
+  height: 15px;
+  background: #cccccc;
+}
