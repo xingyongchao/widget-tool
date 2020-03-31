@@ -37,11 +37,11 @@ window.widgetContext = {
 };
 
 /*dir{%*/
-const dirs = ["test", "todolist", "withDom"]
+const dirs = ["test","todolist","weather","withDom"]
 /*%}*/
 // 与dirs对应，根据顺序对应，可以调整对应磁贴的大小
 const sizes = [
-	1, 3, 5,
+	1, 3, 2,5,
 ]
 // 与dirs对应，根据顺序对应，可以调整对应磁贴的背景
 const backgrounds = [
